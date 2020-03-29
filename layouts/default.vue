@@ -1,11 +1,56 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
+  <v-app>
+    <v-app-bar
+      :clipped-left="clipped"
+      color="white"
       fixed
       app
+      class="hidden-sm-and-down"
+    >
+      <v-toolbar-title class="top_title" @click="goHome" v-text="title"/>
+        <v-layout row justify-end>
+          <v-btn 
+            text
+            v-for="(btn, i) in btns"
+            :to="btn.to"
+            :key="i"
+            router
+            exact
+          >
+          {{ btn.title }}
+          </v-btn>
+        </v-layout>
+    </v-app-bar>
+
+    <!-- 画面サイズms以下時のヘッダー -->
+    <v-app-bar
+      :clipped-left="clipped"
+      color="rgba(255, 255, 255, 1)"
+      fixed
+      app
+      class="hidden-md-and-up"
+    >
+      <v-toolbar-title class="top_title" @click="goHome" v-text="title"/>
+      <v-spacer />
+      <v-btn
+        icon
+        @click.stop="rightDrawer = !rightDrawer"
+      >
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content>
+      <v-container>
+        <nuxt />
+      </v-container>
+    </v-content>
+
+    <v-navigation-drawer
+      v-model="rightDrawer"
+      :right="right"
+      temporary
+      fixed
     >
       <v-list>
         <v-list-item
@@ -24,66 +69,13 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-content>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer
       :fixed="fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <v-layout justify-center>
+        <span>&copy; {{ new Date().getFullYear() }} 杉本孔明</span>
+      </v-layout>
     </v-footer>
   </v-app>
 </template>
@@ -97,21 +89,54 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          icon: 'person',
+          title: 'Profile',
+          to: '/profile'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'News',
+          to: '/news'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Photos',
+          to: '/photos'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: '杉 本 孔 明',
+      btns: [
+        {
+          title: 'Profile',
+          to: '/profile'
+        },
+        {
+          title: 'News',
+          to: '/news'
+        },
+        {
+          title: 'Photos',
+          to: '/photos'
+        },
+      ],
     }
+  },
+  methods: {
+    goHome() {
+      this.$router.push('/')
+    },
   }
 }
 </script>
+<style lang="sass">
+.top_title 
+  cursor: pointer
+  color: black
+  font-weight: bold
+  font-size: 25px
+  font-family: 'Sawarabi Gothic', sans-serif
+
+</style>
