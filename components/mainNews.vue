@@ -18,7 +18,7 @@
           :key="i"
         >
           <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-          <p style="font-size: 17px;">{{ info.content }}</p>
+          <p class="subtitle-1">{{ info.content }}</p>
         </div>
       </v-card-text>
     </v-card>
