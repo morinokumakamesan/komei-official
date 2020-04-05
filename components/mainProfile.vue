@@ -1,43 +1,36 @@
 <template>
-  <!-- <div class="VueToNuxtLogo"> -->
-  <v-container>
-    <v-card>
+  <div class="VueToNuxtLogo">
+  <!-- <v-container> -->
+    <v-col
+      md="10"
+      offset-md="1"
+    >
+    <v-card
+      flat
+    >
       <v-card-title class="headline">
         Profile
       </v-card-title>
-      <v-card-text>
+      <v-card-text style="white-space:pre-line; word-wrap:break-word;">
         <hr size="3" class="mb-3">
-        <div
-          v-for="(info, i) in news"
-          :key="i"
-        >
-          <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-          <p style="font-size: 17px;">{{ info.content }}</p>
-        </div>
+        <p class="subtitle-1" style="font-size: 17px;">{{ content }}</p>
       </v-card-text>
     </v-card>
     <div class="Triangle Triangle--two" />
     <div class="Triangle Triangle--one" />
     <div class="Triangle Triangle--three" />
     <div class="Triangle Triangle--four" />
-  </v-container>
-  <!-- </div> -->
+  <!-- </v-container> -->
+    </v-col>
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return{
-      news: [
-        {
-          date: '2020.04.05',
-          content: '孔明ライブ　@渋谷'
-        },
-        {
-          date: '2020.04.06',
-          content: '孔明ライブ　@渋谷'
-        }
-      ]
+      content: `熊本県出身のシンガーソングライター。ハイトーンの声量おばけ。
+      勾玉野郎。夏が好きです。旅や神社巡り、御朱印集めが趣味。都内で活動中。`
     }
   }
 }

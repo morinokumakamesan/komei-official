@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!-- 画面サイズmd以上時のヘッダー -->
     <v-app-bar
       :clipped-left="clipped"
       color="white"

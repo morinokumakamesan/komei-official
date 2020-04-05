@@ -1,7 +1,13 @@
 <template>
-  <!-- <div class="VueToNuxtLogo"> -->
-  <v-container>
-    <v-card>
+  <div class="VueToNuxtLogo">
+  <!-- <v-container> -->
+    <v-col
+      md="10"
+      offset-md="1"
+    >
+    <v-card
+      flat
+    >
       <v-card-title class="headline">
         News
       </v-card-title>
@@ -20,8 +26,9 @@
     <div class="Triangle Triangle--one" />
     <div class="Triangle Triangle--three" />
     <div class="Triangle Triangle--four" />
-  </v-container>
-  <!-- </div> -->
+    </v-col>
+  <!-- </v-container> -->
+  </div>
 </template>
 
 <script>

@@ -1,23 +1,26 @@
-<template>
+<template style="background-color: #898989">
   <v-layout
     column
     justify-center
-    align-center
   >
-    <v-flex
-      xs12
-      sm8
-      md6
+    <div class="text-center hidden-md-and-up">
+      <v-img
+        :src=img_main
+      >
+      </v-img>
+    </div>
+    <v-col
+      md="10"
+      offset-md="1"
+      class="hidden-sm-and-down"
     >
-      <div class="text-center">
-        <v-img
-          :src=img_main
-        >
-        </v-img>
-      </div>
-      <mainProfile class="animate"/>
-      <mainNews class="animate"/>
-    </v-flex>
+      <v-img
+        :src=img_main
+      >
+      </v-img>
+    </v-col>
+    <mainProfile class="animate"/>
+    <mainNews class="animate"/>
   </v-layout>
 </template>
 
