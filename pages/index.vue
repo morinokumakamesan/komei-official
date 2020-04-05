@@ -15,17 +15,20 @@
         >
         </v-img>
       </div>
-      <mainNews/>
+      <mainProfile class="animate"/>
+      <mainNews class="animate"/>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+import mainProfile from '~/components/mainProfile.vue'
 import mainNews from '~/components/mainNews.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
+    mainProfile,
     mainNews,
     VuetifyLogo
   },
@@ -43,6 +46,10 @@ export default {
         { hid: 'description', name: 'description', content: 'My custom description' }
       ]
     }
+  },
+  mounted() {
+    window.sr = ScrollReveal();
+    sr.reveal('.animate');
   }
 }
 </script>

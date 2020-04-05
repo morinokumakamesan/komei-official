@@ -3,7 +3,7 @@
   <v-container>
     <v-card>
       <v-card-title class="headline">
-        News
+        Profile
       </v-card-title>
       <v-card-text>
         <hr size="3" class="mb-3">

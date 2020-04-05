@@ -27,6 +27,11 @@ module.exports = {
         href:
           'https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap'
       },
+    ],
+    script: [
+      {
+        src: 'https://cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js'
+      }
     ]
   },
   /*
