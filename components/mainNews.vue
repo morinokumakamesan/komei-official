@@ -8,17 +8,17 @@
     <v-card
       flat
     >
-      <v-card-title class="headline">
+      <v-card-title class="title" style="padding:5px 16px 5px">
         News
       </v-card-title>
-      <v-card-text>
+      <v-card-text style="padding:0px 16px 0px">
         <hr size="3" class="mb-3">
         <div
           v-for="(info, i) in news"
           :key="i"
         >
           <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-          <p class="subtitle-1">{{ info.content }}</p>
+          <p class="subtitle-2">{{ info.content }}</p>
         </div>
       </v-card-text>
     </v-card>
