@@ -19,21 +19,22 @@
       >
       </v-img>
     </v-col>
-    <mainProfile class="animate"/>
+    <!-- <mainProfile class="animate"/> -->
     <mainNews class="animate"/>
+    <mainLive class="animate"/>
   </v-layout>
 </template>
 
 <script>
-import mainProfile from '~/components/mainProfile.vue'
+// import mainProfile from '~/components/mainProfile.vue'
 import mainNews from '~/components/mainNews.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import mainLive from '~/components/mainLive.vue'
 
 export default {
   components: {
-    mainProfile,
+    // mainProfile,
     mainNews,
-    VuetifyLogo
+    mainLive,
   },
   data() {
     return {

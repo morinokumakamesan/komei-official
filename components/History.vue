@@ -7,7 +7,7 @@
       <v-card
         flat
       >
-        <v-card-title class="headline">
+        <v-card-title class="title" style="padding:5px 16px 5px">
           History
         </v-card-title>
         <v-card-text style="white-space:pre-line; word-wrap:break-word;">
@@ -17,12 +17,13 @@
             :key="i"
           >
             <v-row
-              class="subtitle-1"
+              class="subtitle-2"
             >
             <v-col
               v-for="n in 2"
               :key="n"
               :cols="n === 1 ? 4 : 8"
+              style="padding: 0px 5px 5px 12px;"
             >
               <v-card
                 flat

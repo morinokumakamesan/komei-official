@@ -13,7 +13,7 @@
       </v-card-title>
       <v-card-text style="padding:0px 16px 0px; white-space:pre-line; word-wrap:break-word;">
         <hr size="3" class="mb-3">
-        <p class="subtitle-2">{{ content }}</p>
+        <div class="subtitle-2">{{ content }}</div>
       </v-card-text>
     </v-card>
     <div class="Triangle Triangle--two" />

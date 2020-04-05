@@ -19,21 +19,19 @@
       >
       </v-img>
     </v-col>
-    <div>
-      
-    </div>
+    <mainProfile class="animate"/>
     <History class="animate"/>
   </v-layout>
 </template>
 
 <script>
+import mainProfile from '~/components/mainProfile.vue'
 import History from '~/components/History.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
+    mainProfile,
     History,
-    VuetifyLogo
   },
   data() {
     return {
