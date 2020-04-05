@@ -15,18 +15,18 @@
         >
         </v-img>
       </div>
-      <Logo/>
+      <mainNews/>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import mainNews from '~/components/mainNews.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
-    Logo,
+    mainNews,
     VuetifyLogo
   },
   data() {

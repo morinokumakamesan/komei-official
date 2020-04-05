@@ -53,7 +53,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/vuetify',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
   ],

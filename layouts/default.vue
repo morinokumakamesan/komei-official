@@ -40,10 +40,10 @@
       </v-btn>
     </v-app-bar>
 
-    <v-content>
-      <v-container>
+    <v-content max-width=100%>
+      <!-- <v-container> -->
         <nuxt />
-      </v-container>
+      <!-- </v-container> -->
     </v-content>
 
     <v-navigation-drawer
@@ -69,10 +69,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
+    <v-footer>
       <v-layout justify-center>
         <span>&copy; {{ new Date().getFullYear() }} 杉本孔明</span>
       </v-layout>
@@ -84,6 +81,7 @@
 export default {
   data () {
     return {
+      img_main: require('../assets/images/main.jpg'),
       clipped: false,
       drawer: false,
       fixed: false,
@@ -107,7 +105,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: '杉 本 孔 明',
+      title: '杉本 孔明',
       btns: [
         {
           title: 'Profile',
@@ -136,7 +134,7 @@ export default {
   cursor: pointer
   color: black
   font-weight: bold
-  font-size: 25px
+  font-size: 22px
   font-family: 'Sawarabi Gothic', sans-serif
 
 </style>
