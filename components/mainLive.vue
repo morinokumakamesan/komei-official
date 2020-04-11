@@ -19,7 +19,7 @@
               :key="i"
             >
               <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-              <p class="subtitle-2" style="margin:0 0 5px">{{ info.content }}</p>
+              <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
             </div>
           </div>
           <div v-else>
