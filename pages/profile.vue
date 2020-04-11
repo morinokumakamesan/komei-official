@@ -1,4 +1,4 @@
-<template style="background-color: #898989">
+<template>
   <v-layout
     column
     justify-center

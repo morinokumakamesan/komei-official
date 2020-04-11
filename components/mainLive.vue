@@ -5,34 +5,35 @@
       md="10"
       offset-md="1"
     >
-    <v-card
-      flat
-    >
-      <v-card-title class="title" style="padding:5px 16px 5px">
-        Live
-      </v-card-title>
-      <v-card-text style="padding:0px 16px 0px">
-        <hr size="3" class="mb-3">
-        <div
-          v-for="(info, i) in news"
-          :key="i"
-        >
-          <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-          <p class="subtitle-2">{{ info.content }}</p>
-        </div>
-      </v-card-text>
-    </v-card>
-    <div class="Triangle Triangle--two" />
-    <div class="Triangle Triangle--one" />
-    <div class="Triangle Triangle--three" />
-    <div class="Triangle Triangle--four" />
+      <v-card
+        flat
+      >
+        <v-card-title class="title" style="padding:5px 16px 5px">
+          Live
+        </v-card-title>
+        <v-card-text style="padding:0px 16px 0px">
+          <hr size="3" class="mb-3">
+          <div v-if="news.length">
+            <div
+              v-for="(info, i) in news"
+              :key="i"
+            >
+              <span class="grey--text text--darken-1">{{ info.date }}</span><br>
+              <p class="subtitle-2" style="margin:0 0 5px">{{ info.content }}</p>
+            </div>
+          </div>
+          <div v-else>
+            <p class="subtitle-2">本日{{ today[0] }}/{{ today[1] }}時点でライブの予定はありません。</p>
+          </div>
+        </v-card-text>
+      </v-card>
     </v-col>
-  <!-- </v-container> -->
   </div>
 </template>
 
 <script>
 export default {
+  props: ['today'],
   data() {
     return{
       news: [
@@ -50,6 +51,6 @@ export default {
         }
       ]
     }
-  }
+  },
 }
 </script>

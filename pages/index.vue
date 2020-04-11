@@ -19,27 +19,25 @@
       >
       </v-img>
     </v-col>
-    <!-- <mainProfile class="animate"/> -->
-    <mainNews class="animate"/>
-    <mainLive class="animate"/>
+    <mainNews :num=3 class="animate"/>
+    <mainLive :today="today" class="animate"/>
   </v-layout>
 </template>
 
 <script>
-// import mainProfile from '~/components/mainProfile.vue'
 import mainNews from '~/components/mainNews.vue'
 import mainLive from '~/components/mainLive.vue'
 
 export default {
   components: {
-    // mainProfile,
     mainNews,
     mainLive,
   },
   data() {
     return {
       title: '杉本孔明',
-      img_main: require('../assets/images/main.jpg')
+      img_main: require('../assets/images/main.jpg'),
+      today: [],
     }
   },
   head () {
@@ -54,6 +52,9 @@ export default {
   mounted() {
     window.sr = ScrollReveal();
     sr.reveal('.animate');
+    let tmp = new Date();
+    this.today = [tmp.getMonth()+1, tmp.getDate()]
+    console.log(this.today);
   }
 }
 </script>
