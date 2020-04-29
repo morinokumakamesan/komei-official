@@ -1,6 +1,6 @@
 # komei-official
 
-> My doozie Nuxt.js project
+> 杉本孔明 Official
 
 ## Build Setup
 
