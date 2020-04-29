@@ -4,7 +4,7 @@
     <!-- 画面サイズmd以上時のヘッダー -->
     <v-app-bar
       :clipped-left="clipped"
-      color="#6F6F6F"
+      color="#222222"
       fixed
       app
       class="hidden-sm-and-down"
@@ -14,6 +14,7 @@
           <v-btn 
             text
             v-for="(btn, i) in btns"
+            color="white"
             :to="btn.to"
             :key="i"
             router

@@ -10,13 +10,32 @@
         color="#E6E6E6"
       >
         <v-layout justify-center>
-          <v-card-title class="title" style="padding:5px 16px 5px">
-            Twitter
-          </v-card-title>
+          <!-- 画面サイズms以下時のヘッダー -->
+          <div class="hidden-md-and-up">
+            <v-card-title class="title font-weight-thin" style="padding:5px 16px 5px">
+              Twitter
+            </v-card-title>
+          </div>
+          <!-- 画面サイズ以上時のヘッダー -->
+          <div class="hidden-sm-and-down">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px">
+              Twitter
+            </v-card-title>
+          </div>
         </v-layout>
-        <v-card-text style="padding:0px 16px 0px">
+        <v-card-text style="text-align: center; padding:0px 16px 0px;">
           <hr size="3" class="mb-3">
-          <a class="twitter-timeline" data-lang="en" data-chrome="nofooter" data-height="400" data-weight="70" href="https://twitter.com/sugissw?ref_src=twsrc%5Etfw">Tweets by sugissw</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+          <!-- 画面サイズms以下時のヘッダー -->
+          <div class="hidden-md-and-up">
+            <a class="twitter-timeline" data-lang="en" data-chrome="nofooter" data-height="400" href="https://twitter.com/sugissw?ref_src=twsrc%5Etfw">Tweets by sugissw</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+          <!-- 画面サイズms以上時のヘッダー -->
+          <div class="hidden-sm-and-down">
+            <a class="twitter-timeline" data-lang="en" data-chrome="nofooter" data-height="500" data-width="600" href="https://twitter.com/sugissw?ref_src=twsrc%5Etfw">Tweets by sugissw</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
         </v-card-text>
       </v-card>
     </v-col>

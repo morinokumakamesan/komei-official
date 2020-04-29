@@ -7,9 +7,20 @@
       <v-card
         flat
       >
-        <v-card-title class="title" style="padding:5px 16px 5px">
-          History
-        </v-card-title>
+        <v-layout justify-center>
+          <!-- 画面サイズms以下時 -->
+          <div class="hidden-md-and-up">
+            <v-card-title class="title font-weight-thin" style="padding:5px 16px 5px">
+              History
+            </v-card-title>
+          </div>
+          <!-- 画面サイズms以上時 -->
+          <div class="hidden-sm-and-down">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px">
+              History
+            </v-card-title>
+          </div>
+        </v-layout>
         <v-card-text style="white-space:pre-line; word-wrap:break-word;">
           <hr size="3" class="mb-3">
           <div
@@ -17,7 +28,7 @@
             :key="i"
           >
             <v-row
-              class="subtitle-2"
+              class="subtitle-1"
             >
               <v-col
                 v-for="n in 2"

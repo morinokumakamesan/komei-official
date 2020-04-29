@@ -9,9 +9,18 @@
         flat
       >
         <v-layout justify-center>
-          <v-card-title class="title" style="padding:5px 16px 5px">
-            Schedule
-          </v-card-title>
+          <!-- 画面サイズms以下時 -->
+          <div class="hidden-md-and-up">
+            <v-card-title class="title font-weight-thin" style="padding:5px 16px 5px">
+              Schedule
+            </v-card-title>
+          </div>
+          <!-- 画面サイズ以上時 -->
+          <div class="hidden-sm-and-down">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px">
+              Schedule
+            </v-card-title>
+          </div>
         </v-layout>
         <v-card-text style="padding:0px 16px 0px">
           <hr size="3" class="mb-3">
@@ -20,21 +29,43 @@
               v-for="(info, i) in schedule"
               :key="i"
             >
-              <!-- 表示個数指定 -->
-              <div v-if="i<num">
-                <v-chip
-                  class="ma-2"
-                  :color="chip_color(info.type)"
-                  outlined
-                  small
-                >
-                  {{ info.type }}
-                </v-chip>
-                <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-                <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
+              <!-- 画面サイズms以下時 -->
+              <div class="hidden-md-and-up">
+                <!-- 表示個数指定 -->
+                <div v-if="i<num">
+                  <v-chip
+                    class="ma-2"
+                    :color="chip_color(info.type)"
+                    outlined
+                    small
+                  >
+                    {{ info.type }}
+                  </v-chip>
+                  <span class="grey--text text--darken-1">{{ info.date }}</span><br>
+                  <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
+                </div>
+                <div v-else>
+                </div>
               </div>
-              <div v-else>
+              <!-- 画面サイズms以上時 -->
+              <div class="hidden-sm-and-down">
+                <!-- 表示個数指定 -->
+                <div v-if="i<num">
+                  <v-chip
+                    class="ma-2 subtitle-1"
+                    :color="chip_color(info.type)"
+                    outlined
+                    small
+                  >
+                    {{ info.type }}
+                  </v-chip>
+                  <span class="subtitle-1 grey--text text--darken-1">{{ info.date }}</span><br>
+                  <p class="subtitle-1" style="margin:0 0 8px">{{ info.content }}</p>
+                </div>
+                <div v-else>
+                </div>
               </div>
+
             </div>
           </div>
           <div v-else>
