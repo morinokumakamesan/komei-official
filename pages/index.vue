@@ -21,6 +21,7 @@
     </v-col>
     <mainNews :bg_color=grey :num=5 class="animate"/>
     <mainSchedule :today="today" :num=5 class="animate"/>
+    <!-- <mainProfile class="animate"/> -->
     <twitter class="animate"/>
   </v-layout>
 </template>
@@ -28,12 +29,14 @@
 <script>
 import mainNews from '~/components/mainNews.vue'
 import mainSchedule from '~/components/mainSchedule.vue'
+import mainProfile from '~/components/mainProfile.vue'
 import twitter from '~/components/Twitter.vue'
 
 export default {
   components: {
     mainNews,
     mainSchedule,
+    mainProfile,
     twitter,
   },
   data() {

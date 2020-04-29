@@ -58,8 +58,8 @@
                 >
                   {{ info.type }}
                 </v-chip>
-                <span class="subtitle-1 grey--text text--darken-1">{{ info.date }}</span><br>
-                <p class="subtitle-1" style="margin:0 0 8px">{{ info.content }}</p>
+                <span class="subtitle-1 grey--text text--darken-1">{{ info.date }}</span>
+                <span class="" style="margin:0 0 8px; font-weight:bold; font-size:1.1rem;">{{ info.content }}</span>
               </div>
               <div v-else>
               </div>
