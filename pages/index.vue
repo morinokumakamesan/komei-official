@@ -1,4 +1,4 @@
-<template style="background-color: #898989">
+<template>
   <v-layout
     column
     justify-center
@@ -20,18 +20,21 @@
       </v-img>
     </v-col>
     <mainNews :num=3 class="animate"/>
-    <mainLive :today="today" class="animate"/>
+    <mainSchedule :today="today" :num=3 class="animate"/>
+    <twitter class="animate"/>
   </v-layout>
 </template>
 
 <script>
 import mainNews from '~/components/mainNews.vue'
-import mainLive from '~/components/mainLive.vue'
+import mainSchedule from '~/components/mainSchedule.vue'
+import twitter from '~/components/Twitter.vue'
 
 export default {
   components: {
     mainNews,
-    mainLive,
+    mainSchedule,
+    twitter,
   },
   data() {
     return {

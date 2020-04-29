@@ -19,15 +19,15 @@
       >
       </v-img>
     </v-col>
-    <mainNews :num=100 class="animate"/>
+    <mainSchedule :num=100 class="animate"/>
   </v-layout>
 </template>
 
 <script>
-import mainNews from '~/components/mainNews.vue'
+import mainSchedule from '~/components/mainSchedule.vue'
 export default {
   components: {
-    mainNews,
+    mainSchedule,
   },
   data() {
     return {

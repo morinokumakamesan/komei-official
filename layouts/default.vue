@@ -1,9 +1,10 @@
 <template>
-  <v-app>
+  <!-- <v-app> -->
+  <v-app light style="background: white">
     <!-- 画面サイズmd以上時のヘッダー -->
     <v-app-bar
       :clipped-left="clipped"
-      color="white"
+      color="#6F6F6F"
       fixed
       app
       class="hidden-sm-and-down"
@@ -26,7 +27,7 @@
     <!-- 画面サイズms以下時のヘッダー -->
     <v-app-bar
       :clipped-left="clipped"
-      color="rgba(255, 255, 255, 1)"
+      color="#222222"
       fixed
       app
       class="hidden-md-and-up"
@@ -34,6 +35,7 @@
       <v-toolbar-title class="top_title" @click="goHome" v-text="title"/>
       <v-spacer />
       <v-btn
+        color="white"
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
@@ -42,9 +44,7 @@
     </v-app-bar>
 
     <v-content max-width=100%>
-      <!-- <v-container> -->
         <nuxt />
-      <!-- </v-container> -->
     </v-content>
 
     <v-navigation-drawer
@@ -70,9 +70,11 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer>
+    <v-footer
+      color="#222222"
+    >
       <v-layout justify-center>
-        <span>&copy; {{ new Date().getFullYear() }} 杉本孔明</span>
+        <span style="color:white">&copy; {{ new Date().getFullYear() }} 杉本孔明</span>
       </v-layout>
     </v-footer>
   </v-app>
@@ -88,6 +90,11 @@ export default {
       fixed: false,
       items: [
         {
+          icon: 'home',
+          title: 'Top',
+          to: '/'
+        },
+        {
           icon: 'person',
           title: 'Profile',
           to: '/profile'
@@ -96,6 +103,11 @@ export default {
           icon: 'label',
           title: 'News',
           to: '/news'
+        },
+        {
+          icon: 'calendar_today',
+          title: 'Schedule',
+          to: '/schedule'
         },
         {
           icon: 'photo',
@@ -109,12 +121,20 @@ export default {
       title: '杉本 孔明',
       btns: [
         {
+          title: 'Top',
+          to: '/'
+        },
+        {
           title: 'Profile',
           to: '/profile'
         },
         {
           title: 'News',
           to: '/news'
+        },
+        {
+          title: 'Schedule',
+          to: '/schedule'
         },
         {
           title: 'Photos',
@@ -133,8 +153,7 @@ export default {
 <style lang="sass">
 .top_title 
   cursor: pointer
-  color: black
-  font-weight: bold
+  color: white
   font-size: 22px
   font-family: 'Sawarabi Gothic', sans-serif
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="VueToNuxtLogo">
+  <div class="VueToNuxtLogo" style="background-color:#E6E6E6">
   <!-- <v-container> -->
     <v-col
       md="10"
@@ -7,24 +7,16 @@
     >
       <v-card
         flat
+        color="#E6E6E6"
       >
-        <v-card-title class="title" style="padding:5px 16px 5px">
-          Live
-        </v-card-title>
+        <v-layout justify-center>
+          <v-card-title class="title" style="padding:5px 16px 5px">
+            Twitter
+          </v-card-title>
+        </v-layout>
         <v-card-text style="padding:0px 16px 0px">
           <hr size="3" class="mb-3">
-          <div v-if="news.length">
-            <div
-              v-for="(info, i) in news"
-              :key="i"
-            >
-              <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-              <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
-            </div>
-          </div>
-          <div v-else>
-            <p class="subtitle-2">本日{{ today[0] }}/{{ today[1] }}時点でライブの予定はありません。</p>
-          </div>
+          <a class="twitter-timeline" data-lang="en" data-chrome="nofooter" data-height="400" data-weight="70" href="https://twitter.com/sugissw?ref_src=twsrc%5Etfw">Tweets by sugissw</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </v-card-text>
       </v-card>
     </v-col>

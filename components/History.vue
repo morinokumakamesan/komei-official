@@ -19,45 +19,18 @@
             <v-row
               class="subtitle-2"
             >
-            <v-col
-              v-for="n in 2"
-              :key="n"
-              :cols="n === 1 ? 4 : 8"
-              style="padding: 0px 5px 5px 12px;"
-            >
-              <v-card
-                flat
-              >
-                {{ n === 1 ? history.year : history.content }}
-              </v-card>
-            </v-col>
-
-              <!-- <v-col
-                md="2"
-                sm="4"
-                xs="4"
+              <v-col
+                v-for="n in 2"
+                :key="n"
+                :cols="n === 1 ? 4 : 8"
+                style="padding: 0px 5px 5px 12px;"
               >
                 <v-card
-                  class="pa-2 subtitle-1"
                   flat
                 >
-                {{ cols }}
-                  {{ history.year }}
+                  {{ n === 1 ? history.year : history.content }}
                 </v-card>
               </v-col>
-              <v-col
-                md="10"
-                sm="4"
-                xs="4"
-              >
-                <v-card
-                  class="pa-2 subtitle-1"
-                  flat
-                >
-                {{ cols2 }}
-                  {{ history.content }}
-                </v-card>
-              </v-col> -->
             </v-row>
           </div>
         </v-card-text>

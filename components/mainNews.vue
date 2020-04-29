@@ -1,15 +1,18 @@
 <template>
-  <div class="VueToNuxtLogo">
+  <div class="VueToNuxtLogo" style="background-color:#E6E6E6">
     <v-col
       md="10"
       offset-md="1"
     >
       <v-card
         flat
+        color="#E6E6E6"
       >
-        <v-card-title class="title" style="padding:5px 16px 5px">
-          News
-        </v-card-title>
+        <v-layout justify-center>
+          <v-card-title class="title" style="padding:5px 16px 5px">
+            News
+          </v-card-title>
+        </v-layout>
         <v-card-text style="padding:0px 16px 0px">
           <hr size="3" class="mb-3">
           <div
@@ -18,12 +21,32 @@
           >
             <!-- 表示個数は3未満 -->
             <div v-if="i<num">
+              <v-chip
+                class="ma-2"
+                color="purple darken-3"
+                outlined
+                small
+              >
+                Info
+              </v-chip>
               <span class="grey--text text--darken-1">{{ info.date }}</span><br>
               <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
             </div>
             <div v-else>
             </div>
           </div>
+          <v-layout justify-center>
+            <div style="margin:1rem 0" v-if="num==3">
+              <v-btn
+                color="real darken-1"
+                despressed
+                outlined
+                to="news"
+              >
+                More
+              </v-btn>
+            </div>
+          </v-layout>
         </v-card-text>
       </v-card>
     </v-col>
@@ -38,7 +61,7 @@ export default {
     return{
       news: [
         {
-          date: '2020.04.11',
+          date: '2020.04.11（土）',
           content: '孔明オフィシャルサイトを公開しました。'
         },
         {
