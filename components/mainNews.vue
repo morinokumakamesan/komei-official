@@ -1,12 +1,12 @@
 <template>
-  <div class="VueToNuxtLogo" style="background-color:#E6E6E6">
+  <div class="VueToNuxtLogo" :style="background_color">
     <v-col
       md="10"
       offset-md="1"
     >
       <v-card
         flat
-        color="#E6E6E6"
+        :color="bg_color"
       >
         <v-layout justify-center>
           <v-card-title class="title" style="padding:5px 16px 5px">
@@ -56,7 +56,10 @@
 <script>
 import axios from 'axios'
 export default {
-  props: ['num'],
+  props: {
+    bg_color: '',
+    num: ''
+  },
   data() {
     return{
       news: [
@@ -97,6 +100,11 @@ export default {
       else if(type == 'release'){
         return this.release_color
       }
+    }
+  },
+  computed: {
+    background_color: function(){
+      return 'background-color:' + this.bg_color
     }
   }
 }

@@ -19,7 +19,7 @@
       >
       </v-img>
     </v-col>
-    <mainNews :num=5 class="animate"/>
+    <mainNews :bg_color=grey :num=5 class="animate"/>
     <mainSchedule :today="today" :num=5 class="animate"/>
     <twitter class="animate"/>
   </v-layout>
@@ -41,6 +41,7 @@ export default {
       title: '杉本孔明',
       img_main: require('../assets/images/main.jpg'),
       today: [],
+      grey: '#E6E6E6',
     }
   },
   head () {
