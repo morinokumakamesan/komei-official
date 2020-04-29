@@ -19,15 +19,15 @@
             v-for="(info, i) in news"
             :key="i"
           >
-            <!-- 表示個数は3未満 -->
+            <!-- 表示個数指定 -->
             <div v-if="i<num">
               <v-chip
                 class="ma-2"
-                color="purple darken-3"
                 outlined
+                :color="chip_color(info.type)"
                 small
               >
-                Info
+                {{ info.type }}
               </v-chip>
               <span class="grey--text text--darken-1">{{ info.date }}</span><br>
               <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
@@ -36,7 +36,7 @@
             </div>
           </div>
           <v-layout justify-center>
-            <div style="margin:1rem 0" v-if="num==3">
+            <div style="margin:1rem 0" v-if="num==5">
               <v-btn
                 color="real darken-1"
                 despressed
@@ -61,33 +61,43 @@ export default {
     return{
       news: [
         {
+          type: 'info',
           date: '2020.04.11（土）',
           content: '孔明オフィシャルサイトを公開しました。'
         },
         {
-          date: '2020.04.06',
-          content: '孔明ライブ　@渋谷'
+          type: 'live',
+          date: '2020.04.06（月）',
+          content: '孔明ライブ　@浅草GoldSounds'
         },
         {
-          date: '2020.04.05',
-          content: '孔明ライブ　@渋谷'
-        },
-        {
-          date: '2020.04.05',
-          content: '孔明ライブ　@渋谷'
-        },
-        {
-          date: '2020.04.05',
-          content: '孔明ライブ　@渋谷'
+          type: 'release',
+          date: '2020.04.05（日）',
+          content: 'New Single「〇〇〇〇」'
         },
       ],
-      info: ''
+      info_color: 'blue darken-4',
+      live_color: 'orange darken-3',
+      release_color: 'light-green darken-3',
     }
   },
   mounted(){
     axios
       .get('https://api.coindesk.com/v1/bpi/currentprice.json')
       .then(response => (this.info = response))
+  },
+  methods: {
+    chip_color(type){
+      if(type == 'info'){
+        return this.info_color
+      }
+      else if(type == 'live'){
+        return this.live_color
+      }
+      else if(type == 'release'){
+        return this.release_color
+      }
+    }
   }
 }
 </script>

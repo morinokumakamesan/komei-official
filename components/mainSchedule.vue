@@ -15,20 +15,33 @@
         </v-layout>
         <v-card-text style="padding:0px 16px 0px">
           <hr size="3" class="mb-3">
-          <div v-if="news.length">
+          <div v-if="schedule.length">
             <div
-              v-for="(info, i) in news"
+              v-for="(info, i) in schedule"
               :key="i"
             >
-              <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-              <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
+              <!-- 表示個数指定 -->
+              <div v-if="i<num">
+                <v-chip
+                  class="ma-2"
+                  :color="chip_color(info.type)"
+                  outlined
+                  small
+                >
+                  {{ info.type }}
+                </v-chip>
+                <span class="grey--text text--darken-1">{{ info.date }}</span><br>
+                <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
+              </div>
+              <div v-else>
+              </div>
             </div>
           </div>
           <div v-else>
             <p class="subtitle-2">本日{{ today[0] }}/{{ today[1] }}時点でライブの予定はありません。</p>
           </div>
           <v-layout justify-center>
-            <div style="margin:1rem 0" v-if="num==3">
+            <div style="margin:1rem 0" v-if="num==5">
               <v-btn
                 color="real darken-1"
                 despressed
@@ -51,21 +64,40 @@ export default {
   props: ['num'],
   data() {
     return{
-      news: [
+      schedule: [
         {
-          date: '2020.04.17',
+          type: 'live',
+          date: '2020.04.17（金）',
           content: '孔明ライブ　@浅草Gold Sound'
         },
         {
-          date: '2020.05.02',
+          type: 'live',
+          date: '2020.05.02（土）',
           content: '孔明ライブ　@浅草Gold Sounds'
         },
         {
-          date: '2020.07.14',
+          type: 'live',
+          date: '2020.07.14（火）',
           content: '孔明ライブ　@浅草Gold Sounds'
         }
-      ]
+      ],
+      info_color: 'blue darken-4',
+      live_color: 'orange darken-3',
+      release_color: 'light-green darken-3',
     }
   },
+  methods: {
+    chip_color(type){
+      if(type == 'info'){
+        return this.info_color
+      }
+      else if(type == 'live'){
+        return this.live_color
+      }
+      else if(type == 'release'){
+        return this.release_color
+      }
+    }
+  }
 }
 </script>

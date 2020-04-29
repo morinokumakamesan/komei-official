@@ -19,8 +19,8 @@
       >
       </v-img>
     </v-col>
-    <mainNews :num=3 class="animate"/>
-    <mainSchedule :today="today" :num=3 class="animate"/>
+    <mainNews :num=5 class="animate"/>
+    <mainSchedule :today="today" :num=5 class="animate"/>
     <twitter class="animate"/>
   </v-layout>
 </template>
