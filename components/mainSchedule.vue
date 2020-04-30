@@ -95,21 +95,17 @@ export default {
   props: ['num'],
   data() {
     return{
+      // type：'info' or 'live' or 'release'
       schedule: [
         {
           type: 'live',
-          date: '2020.04.17（金）',
-          content: '孔明ライブ　@浅草Gold Sound'
-        },
-        {
-          type: 'live',
-          date: '2020.05.02（土）',
-          content: '孔明ライブ　@浅草Gold Sounds'
+          date: '2020.07.03（金）',
+          content: 'タイトル未定　@浅草Gold Sound'
         },
         {
           type: 'live',
           date: '2020.07.14（火）',
-          content: '孔明ライブ　@浅草Gold Sounds'
+          content: 'タイトル未定　@浅草Gold Sounds'
         }
       ],
       info_color: 'blue darken-4',

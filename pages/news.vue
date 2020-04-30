@@ -5,7 +5,7 @@
   >
     <div class="text-center hidden-md-and-up">
       <v-img
-        :src=img_profile
+        :src=img_news
       >
       </v-img>
     </div>
@@ -15,7 +15,7 @@
       class="hidden-sm-and-down"
     >
       <v-img
-        :src=img_profile
+        :src=img_news
       >
       </v-img>
     </v-col>
@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       title: '杉本孔明',
-      img_profile: require('../assets/images/news.jpg')
+      img_news: require('../assets/images/news.jpg')
     }
   },
 }

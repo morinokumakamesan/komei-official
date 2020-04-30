@@ -21,7 +21,7 @@
             </v-card-title>
           </div>
         </v-layout>
-        <v-card-text style="white-space:pre-line; word-wrap:break-word;">
+        <v-card-text style="padding:0px 16px 0px; white-space:pre-line; word-wrap:break-word;">
           <hr size="3" class="mb-3">
           <div
             v-for="(history, i) in histories"
