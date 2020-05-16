@@ -14,6 +14,7 @@
                 :src="photo.src"
                 aspect-ratio="1"
                 class="grey lighten-2"
+                decoding="async"
               >
                 <template v-slot:placeholder>
                   <v-row

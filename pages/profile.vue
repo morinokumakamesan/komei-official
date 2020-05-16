@@ -6,6 +6,7 @@
     <div class="text-center hidden-md-and-up">
       <v-img
         :src=img_profile
+        decoding="async"
       >
       </v-img>
     </div>
@@ -16,6 +17,7 @@
     >
       <v-img
         :src=img_profile
+        decoding="async"
       >
       </v-img>
     </v-col>
