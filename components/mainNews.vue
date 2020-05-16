@@ -142,7 +142,5 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.title_fonts
-  font-family: 'Roboto Slab', serif
 
 </style>

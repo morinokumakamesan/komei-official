@@ -21,23 +21,16 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      },
-      { rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css'  
+        href: '//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap'
+        href: '//fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap'
       },
     ],
     script: [
       {
-        src: 'https://cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js'
+        src: '//cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js'
       }
     ]
   },
