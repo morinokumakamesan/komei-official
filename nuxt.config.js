@@ -1,3 +1,4 @@
+import ampify from './plugins/ampify'
 const colors = require('vuetify/es5/util/colors').default
 
 module.exports = {
@@ -110,6 +111,22 @@ module.exports = {
       removeRedundantAttributes: true,
       trimCustomFragments: true,
       useShortDoctype: true
+    }
+  },
+  hooks: {
+    // This hook is called before saving the html to flat file
+    'generate:page': page => {
+      page.html = createAsciiArt(page.html)
+      if (page.route === '/') {
+        page.html = ampify(page.html)
+      }
+    },
+    // This hook is called before serving the html to the browser
+    'render:route': (url, page, { req, res }) => {
+      page.html = createAsciiArt(page.html)
+      if (page.route === '/') {
+        page.html = ampify(page.html)
+      }
     }
   }
 }
