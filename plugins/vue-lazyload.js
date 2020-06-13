@@ -10,10 +10,4 @@ Vue.use(VueLazyload, {
     rootMargin: '0px',
     threshold: 0.1
   },
-  filter: {
-    webp(listener: any, options: any) {
-      if (!options.supportWebp) return
-      listener.src = 'hoge.webp'
-    }
-  }
 })
