@@ -115,11 +115,6 @@ export default {
       release_color: 'light-green darken-3',
     }
   },
-  mounted(){
-    axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
-  },
   methods: {
     chip_color(type){
       if(type == 'info'){

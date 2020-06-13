@@ -33,7 +33,7 @@
 
           <!-- 画面サイズms以上時のヘッダー -->
           <div class="hidden-sm-and-down">
-            <a class="twitter-timeline" data-lang="en" data-chrome="nofooter" data-height="500" data-width="600" href="https://twitter.com/sugissw?ref_src=twsrc%5Etfw">Tweets by sugissw</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-lang="en" data-chrome="nofooter" data-height="500" data-width="600" href="https://twitter.com/sugissw?ref_src=twsrc%5Etfw">Tweets by sugissw</a>
           </div>
 
         </v-card-text>
