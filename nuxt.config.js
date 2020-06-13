@@ -32,9 +32,6 @@ module.exports = {
       {
         src: '//cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js'
       },
-      {
-        src: '~plugins/vue-lazyload', ssr: false
-      }
     ]
   },
   /*
@@ -50,7 +47,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~plugins/ga.js', mode: 'client' }
+    { src: '~plugins/ga.js', mode: 'client' },
+    { src: '~plugins/vue-lazyload', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
