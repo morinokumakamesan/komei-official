@@ -31,6 +31,9 @@ module.exports = {
     script: [
       {
         src: '//cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js'
+      },
+      {
+        src: '~plugins/vue-lazyload', ssr: false
       }
     ]
   },
