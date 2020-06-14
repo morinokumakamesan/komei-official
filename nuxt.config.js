@@ -48,7 +48,6 @@ module.exports = {
   */
   plugins: [
     { src: '~plugins/ga.js', mode: 'client' },
-    { src: '~plugins/vue-lazyload', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -95,6 +94,10 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: true,
+    analyze: {
+      analyzerMode: 'static'
+    },
     /*
     ** You can extend webpack config here
     */

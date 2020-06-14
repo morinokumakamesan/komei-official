@@ -5,7 +5,7 @@
   >
     <div class="text-center hidden-md-and-up">
       <v-img
-        :v-lazy=img_main
+        :src=img_main
         decoding="async"
       >
       </v-img>
@@ -16,7 +16,7 @@
       class="hidden-sm-and-down"
     >
       <v-img
-        :v-lazy=img_main
+        :src=img_main
         decoding="async"
       >
       </v-img>
