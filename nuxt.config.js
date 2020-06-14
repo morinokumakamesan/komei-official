@@ -95,10 +95,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    analyze: true,
-    analyze: {
-      analyzerMode: 'static'
-    },
     /*
     ** You can extend webpack config here
     */
