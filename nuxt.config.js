@@ -75,6 +75,7 @@ module.exports = {
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    treeShake: true,
     theme: {
       dark: false,
       themes: {
@@ -97,6 +98,11 @@ module.exports = {
     analyze: true,
     analyze: {
       analyzerMode: 'static'
+    },
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true
     },
     /*
     ** You can extend webpack config here
