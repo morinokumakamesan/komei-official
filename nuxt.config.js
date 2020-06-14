@@ -95,6 +95,17 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: false,
+    analyze: {
+      analyzerMode: 'static'
+    },
+    transpile: [/^vuetify/],
+
+    splitChunks: {
+      layouts: false,
+      pages: false,
+      commons: true
+    },
     /*
     ** You can extend webpack config here
     */

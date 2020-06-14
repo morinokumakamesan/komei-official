@@ -63,7 +63,6 @@ export default {
     sr.reveal('.animate');
     let tmp = new Date();
     this.today = [tmp.getMonth()+1, tmp.getDate()]
-    console.log(this.today);
   }
 }
 </script>
