@@ -99,11 +99,6 @@ module.exports = {
     analyze: {
       analyzerMode: 'static'
     },
-    splitChunks: {
-      layouts: true,
-      pages: true,
-      commons: true
-    },
     /*
     ** You can extend webpack config here
     */
