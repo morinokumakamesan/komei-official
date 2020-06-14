@@ -21,10 +21,6 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: '//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      },
-      {
-        rel: 'stylesheet',
         href: '//fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap'
       },
     ],
@@ -103,7 +99,7 @@ module.exports = {
 
     splitChunks: {
       layouts: false,
-      pages: false,
+      pages: true,
       commons: true
     },
     /*
