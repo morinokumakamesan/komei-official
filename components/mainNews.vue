@@ -11,13 +11,13 @@
         <v-layout justify-center>
           <!-- 画面サイズms以下時 -->
           <div class="hidden-md-and-up">
-            <v-card-title class="title font-weight-thin" style="padding:5px 16px 5px">
+            <v-card-title class="title font-weight-thin" style="padding:5px 16px 5px; margin:5px 0px 5px;">
               News
             </v-card-title>
           </div>
           <!-- 画面サイズms以上時 -->
           <div class="hidden-sm-and-down">
-            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px; margin:30px 0px 20px;">
               News
             </v-card-title>
           </div>
@@ -67,18 +67,38 @@
             </div>
           </div>
 
-          <v-layout justify-center>
-            <div style="margin:1rem 0" v-if="num==5">
-              <v-btn
-                color="real darken-1"
-                despressed
-                outlined
-                to="news"
-              >
-                More
-              </v-btn>
-            </div>
-          </v-layout>
+          <!-- 画面サイズms以下時 -->
+          <div class="hidden-md-and-up">
+            <v-layout justify-center>
+              <div style="margin:1rem 0; margin:25px 0px 20px;" v-if="num==5">
+                <v-btn
+                  color="real darken-1"
+                  despressed
+                  outlined
+                  to="news"
+                >
+                  More
+                </v-btn>
+              </div>
+            </v-layout>
+          </div>
+
+          <!-- 画面サイズms以上時 -->
+          <div class="hidden-sm-and-down">
+            <v-layout justify-center>
+              <div style="margin:1rem 0; margin:40px 0px 40px;" v-if="num==5">
+                <v-btn
+                  color="real darken-1"
+                  despressed
+                  outlined
+                  to="news"
+                >
+                  More
+                </v-btn>
+              </div>
+            </v-layout>
+          </div>
+
         </v-card-text>
       </v-card>
     </v-col>

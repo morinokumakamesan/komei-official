@@ -41,6 +41,7 @@
                 <v-card
                   flat
                   style="padding:5px 0px 10px"
+                  class="grey--text text--darken-1"
                 >
                   {{ n === 1 ? history.year : history.content }}
                 </v-card>
@@ -65,7 +66,8 @@
               >
                 <v-card
                   flat
-                  style="padding:5px 0px 10px"
+                  style="padding:5px 0px 10px; font-size:14px;"
+                  class="grey--text text--darken-1"
                 >
                   {{ n === 1 ? history.year : history.content }}
                 </v-card>
