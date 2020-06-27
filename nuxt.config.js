@@ -23,6 +23,10 @@ module.exports = {
         rel: 'stylesheet',
         href: '//fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap'
       },
+      {
+        rel: 'stylesheet',
+        href: '//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      },
     ],
     script: [
       {
