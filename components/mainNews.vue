@@ -42,7 +42,7 @@
                   {{ info.type }}
                 </v-chip>
                 <span class="grey--text text--darken-1" :style="infoSpace(info.type)">{{ info.date }}</span><br>
-                <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
+                <p class="subtitle-2" style="margin:0 0 8px; white-space:pre-wrap; word-wrap:break-word;">{{ info.content }}</p>
               </div>
               <div v-else>
               </div>
@@ -116,19 +116,17 @@ export default {
     return{
       news: [
         {
+          type: 'live',
+          date: '2020.06.18（木）',
+          content: `【2020.07.14（火）】
+Asakusa Gold Sound pre.
+『杉本孔明×尾上明範×足達翔スリーマンライブ~言葉の灯~』
+`
+        },
+        {
           type: 'info',
           date: '2020.04.11（土）',
           content: '孔明オフィシャルサイトを公開しました。'
-        },
-        {
-          type: 'live',
-          date: '2020.04.06（月）',
-          content: '孔明ライブ　@浅草GoldSounds'
-        },
-        {
-          type: 'release',
-          date: '2020.04.05（日）',
-          content: 'New Single「〇〇〇〇」'
         },
       ],
       info_color: 'blue darken-4',
@@ -157,7 +155,7 @@ export default {
       return function(type){
         if(type == 'info'){
           return {
-            'margin-left' : '20px',            
+            'margin' : '0px 0px 0px 20px',            
           }
         }
         else if(type == 'live'){

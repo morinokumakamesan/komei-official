@@ -10,13 +10,13 @@
         <v-layout justify-center>
           <!-- 画面サイズms以下時 -->
           <div class="hidden-md-and-up">
-            <v-card-title class="title font-weight-thin" style="padding:5px 16px 5px">
+            <v-card-title class="title font-weight-thin" style="padding:5px 16px 5px; margin:5px 0px 5px;">
               History
             </v-card-title>
           </div>
           <!-- 画面サイズms以上時 -->
           <div class="hidden-sm-and-down">
-            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px; margin:30px 0px 20px;">
               History
             </v-card-title>
           </div>

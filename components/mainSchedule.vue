@@ -42,7 +42,22 @@
                   {{ info.type }}
                 </v-chip>
                 <span class="grey--text text--darken-1" :style="infoSpace(info.type)">{{ info.date }}</span><br>
-                <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
+                <p class="subtitle-2" style="margin:0 0 8px; white-space:pre-wrap; word-wrap:break-word;">{{ info.content }}</p>
+                <v-img
+                  :src="info.img"
+                  class="grey lighten-2"
+                  decoding="async"
+                >
+                  <template v-slot:placeholder>
+                    <v-row
+                      class="fill-height ma-0"
+                      align="center"
+                      justify="center"
+                    >
+                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    </v-row>
+                  </template>
+                </v-img>
               </div>
               <div v-else>
               </div>
@@ -115,18 +130,15 @@ export default {
   props: ['num'],
   data() {
     return{
-      // type：'info' or 'live' or 'release'
       schedule: [
         {
           type: 'live',
-          date: '2020.07.03（金）',
-          content: 'タイトル未定　@浅草Gold Sound'
-        },
-        {
-          type: 'live',
           date: '2020.07.14（火）',
-          content: 'タイトル未定　@浅草Gold Sounds'
-        }
+          content: `Asakusa Gold Sound pre.
+『杉本孔明×尾上明範×足達翔スリーマンライブ~言葉の灯~』
+`,
+          img: require('../assets/images/20200714.jpg'),
+        },
       ],
       info_color: 'blue darken-4',
       live_color: 'orange darken-3',
