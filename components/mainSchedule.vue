@@ -17,7 +17,7 @@
           </div>
           <!-- 画面サイズ以上時 -->
           <div class="hidden-sm-and-down">
-            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px;">
               Schedule
             </v-card-title>
           </div>
@@ -25,48 +25,47 @@
         <v-card-text style="padding:0px 16px 0px">
           <hr size="3" class="mb-3">
           <div v-if="schedule.length">
-            <div
-              v-for="(info, i) in schedule"
-              :key="i"
-            >
-              <!-- 画面サイズms以下時 -->
-              <div class="hidden-md-and-up">
-                <!-- 表示個数指定 -->
-                <div v-if="i<num">
-                  <v-chip
-                    class="ma-2"
-                    :color="chip_color(info.type)"
-                    outlined
-                    small
-                  >
-                    {{ info.type }}
-                  </v-chip>
-                  <span class="grey--text text--darken-1">{{ info.date }}</span><br>
-                  <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
-                </div>
-                <div v-else>
-                </div>
+          <div
+            v-for="(info, i) in schedule"
+            :key="i"
+          >
+            <!-- 画面サイズms以下時 -->
+            <div class="hidden-md-and-up">
+              <!-- 表示個数指定 -->
+              <div v-if="i<num">
+                <v-chip
+                  class="ma-2"
+                  outlined
+                  :color="chip_color(info.type)"
+                  small
+                >
+                  {{ info.type }}
+                </v-chip>
+                <span class="grey--text text--darken-1" :style="infoSpace(info.type)">{{ info.date }}</span><br>
+                <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
               </div>
-              <!-- 画面サイズms以上時 -->
-              <div class="hidden-sm-and-down">
-                <!-- 表示個数指定 -->
-                <div v-if="i<num">
-                  <v-chip
-                    class="ma-2 subtitle-1"
-                    :color="chip_color(info.type)"
-                    outlined
-                    small
-                  >
-                    {{ info.type }}
-                  </v-chip>
-                  <span class="subtitle-1 grey--text text--darken-1">{{ info.date }}</span>
-                  <span class="" style="margin:0 0 8px; font-size:1.1rem;">{{ info.content }}</span>
-                </div>
-                <div v-else>
-                </div>
+              <div v-else>
               </div>
-
             </div>
+            <!-- 画面サイズms以上時 -->
+            <div class="hidden-sm-and-down">
+              <!-- 表示個数指定 -->
+              <div v-if="i<num">
+                <v-chip
+                  class="ma-2 subtitle-1"
+                  outlined
+                  :color="chip_color(info.type)"
+                  small
+                >
+                  {{ info.type }}
+                </v-chip>
+                <span class="subtitle-1 grey--text text--darken-1" :style="infoSpace_2(info.type)">{{ info.date }}</span>
+                <span class="subtitle-1" style="margin:0 30px 8px; font-size:1.1rem;">{{ info.content }}</span>
+              </div>
+              <div v-else>
+              </div>
+            </div>
+          </div>
           </div>
           <div v-else>
             <p class="subtitle-2">本日{{ today[0] }}/{{ today[1] }}時点でライブの予定はありません。</p>
@@ -123,6 +122,41 @@ export default {
       }
       else if(type == 'release'){
         return this.release_color
+      }
+    }
+  },
+  computed: {
+    infoSpace: function(){
+      return function(type){
+        if(type == 'info'){
+          return {
+            'margin-left' : '20px',            
+          }
+        }
+        else if(type == 'live'){
+          return {
+            'margin-left' : '20px',            
+          }
+        }
+      }
+    },
+    infoSpace_2: function(){
+      return function(type){
+        if(type == 'info'){
+          return {
+            'margin-left' : '45px',            
+          }
+        }
+        else if(type == 'live'){
+          return {
+            'margin-left' : '48px',            
+          }
+        }
+        else{
+          return {
+            'margin-left' : '20px',            
+          }
+        }
       }
     }
   }

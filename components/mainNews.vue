@@ -24,6 +24,7 @@
         </v-layout>
         <v-card-text style="padding:0px 16px 0px">
           <hr size="3" class="mb-3">
+
           <div
             v-for="(info, i) in news"
             :key="i"
@@ -40,7 +41,7 @@
                 >
                   {{ info.type }}
                 </v-chip>
-                <span class="grey--text text--darken-1">{{ info.date }}</span><br>
+                <span class="grey--text text--darken-1" :style="infoSpace(info.type)">{{ info.date }}</span><br>
                 <p class="subtitle-2" style="margin:0 0 8px">{{ info.content }}</p>
               </div>
               <div v-else>
@@ -58,8 +59,8 @@
                 >
                   {{ info.type }}
                 </v-chip>
-                <span class="subtitle-1 grey--text text--darken-1">{{ info.date }}</span>
-                <span class="" style="margin:0 0 8px; font-size:1.1rem;">{{ info.content }}</span>
+                <span class="subtitle-1 grey--text text--darken-1" :style="infoSpace_2(info.type)">{{ info.date }}</span>
+                <span class="subtitle-1" style="margin:0 30px 8px; font-size:1.1rem;">{{ info.content }}</span>
               </div>
               <div v-else>
               </div>
@@ -131,11 +132,43 @@ export default {
   computed: {
     background_color: function(){
       return 'background-color:' + this.bg_color
+    },
+    infoSpace: function(){
+      return function(type){
+        if(type == 'info'){
+          return {
+            'margin-left' : '20px',            
+          }
+        }
+        else if(type == 'live'){
+          return {
+            'margin-left' : '20px',            
+          }
+        }
+      }
+    },
+    infoSpace_2: function(){
+      return function(type){
+        if(type == 'info'){
+          return {
+            'margin-left' : '45px',            
+          }
+        }
+        else if(type == 'live'){
+          return {
+            'margin-left' : '48px',            
+          }
+        }
+        else{
+          return {
+            'margin-left' : '20px',            
+          }
+        }
+      }
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
-
 </style>
