@@ -46,7 +46,7 @@ export default {
       title: '杉本孔明',
       img_main: require('../assets/images/main.jpg'),
       today: [],
-      grey: '#E6E6E6',
+      grey: '#F5F5F5',
     }
   },
   head () {

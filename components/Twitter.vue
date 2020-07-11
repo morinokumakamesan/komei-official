@@ -1,5 +1,5 @@
 <template>
-  <div class="VueToNuxtLogo" style="background-color:#E6E6E6">
+  <div class="VueToNuxtLogo" style="background-color:#F5F5F5">
   <!-- <v-container> -->
     <v-col
       md="10"
@@ -7,7 +7,7 @@
     >
       <v-card
         flat
-        color="#E6E6E6"
+        color="#F5F5F5"
       >
         <v-layout justify-center>
           <!-- 画面サイズms以下時のヘッダー -->
@@ -18,7 +18,7 @@
           </div>
           <!-- 画面サイズ以上時のヘッダー -->
           <div class="hidden-sm-and-down">
-            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px; margin:30px 0px 20px;">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px; margin:20px 0px 20px;">
               Twitter
             </v-card-title>
           </div>

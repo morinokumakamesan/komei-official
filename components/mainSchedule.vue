@@ -17,7 +17,7 @@
           </div>
           <!-- 画面サイズ以上時 -->
           <div class="hidden-sm-and-down">
-            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px; margin:30px 0px 20px;">
+            <v-card-title class="display-1 font-weight-thin" style="padding:5px 16px 5px; margin:20px 0px 20px;">
               Schedule
             </v-card-title>
           </div>
