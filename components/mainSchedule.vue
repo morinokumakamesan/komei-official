@@ -76,6 +76,23 @@
                 </v-chip>
                 <span class="subtitle-1 grey--text text--darken-1" :style="infoSpace_2(info.type)">{{ info.date }}</span>
                 <span class="subtitle-1" style="margin:0 30px 8px; font-size:1.1rem;">{{ info.content }}</span>
+                <v-img
+                  :src="info.img"
+                  class="grey lighten-2"
+                  decoding="async"
+                  max-width="600px"
+                  style="margin: auto;"
+                >
+                  <template v-slot:placeholder>
+                    <v-row
+                      class="fill-height mb-6"
+                      align="center"
+                      justify="center"
+                    >
+                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    </v-row>
+                  </template>
+                </v-img>
               </div>
               <div v-else>
               </div>
@@ -94,7 +111,7 @@
                   color="real darken-1"
                   despressed
                   outlined
-                  to="news"
+                  to="schedule"
                 >
                   More
                 </v-btn>
@@ -110,7 +127,7 @@
                   color="real darken-1"
                   despressed
                   outlined
-                  to="news"
+                  to="schedule"
                 >
                   More
                 </v-btn>
@@ -169,6 +186,11 @@ export default {
         else if(type == 'live'){
           return {
             'margin-left' : '20px',            
+          }
+        }
+        else{
+          return {
+            'margin-left' : '2px',            
           }
         }
       }

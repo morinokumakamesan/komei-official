@@ -155,12 +155,17 @@ Asakusa Gold Sound pre.
       return function(type){
         if(type == 'info'){
           return {
-            'margin' : '0px 0px 0px 20px',            
+            'margin-left' : '20px',            
           }
         }
         else if(type == 'live'){
           return {
             'margin-left' : '20px',            
+          }
+        }
+        else{
+          return {
+            'margin-left' : '2px',            
           }
         }
       }
