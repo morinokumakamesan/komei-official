@@ -85,7 +85,6 @@
 export default {
   data () {
     return {
-      img_main: require('../assets/images/main.jpg'),
       clipped: false,
       drawer: false,
       fixed: false,
@@ -148,7 +147,7 @@ export default {
     goHome() {
       this.$router.push('/')
     },
-  }
+  },
 }
 </script>
 <style lang="sass">
