@@ -57,10 +57,6 @@ module.exports = {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-    // '@nuxtjs/vuetify',
-    '@aceforth/nuxt-optimized-images',
-  ],
   optimizedImages: {
     optimizeImages: true
   },
@@ -68,6 +64,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@aceforth/nuxt-optimized-images',
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
