@@ -63,7 +63,7 @@ module.exports = {
   ],
   optimizedImages: {
     optimizeImages: true
-  }
+  },
   /*
   ** Nuxt.js modules
   */
