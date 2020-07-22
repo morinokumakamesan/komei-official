@@ -5,6 +5,8 @@
   >
     <div class="text-center hidden-md-and-up">
       <v-img
+        width="100%"
+        height="250px"
         :src=img_main
         decoding="async"
       >
@@ -16,15 +18,31 @@
       class="hidden-sm-and-down"
     >
       <v-img
+        width="100%"
+        height="700px"
         :src=img_main
         decoding="async"
       >
       </v-img>
     </v-col>
-    <mainNews :bg_color=grey :num=5 class="animate"/>
-    <mainSchedule :today="today" :num=5 class="animate"/>
+    <mainNews :bg_color=grey :num=5 />
+    <v-lazy
+        :options="{
+          threshold: .5
+        }"
+        transition="fade-transition"
+      >
+      <mainSchedule :today="today" :num=5 />
+    </v-lazy>
     <!-- <mainProfile class="animate"/> -->
-    <twitter class="animate"/>
+    <v-lazy
+        :options="{
+          threshold: .5
+        }"
+        transition="fade-transition"
+      >
+      <twitter/>
+    </v-lazy>
   </v-layout>
 </template>
 
@@ -59,8 +77,8 @@ export default {
     }
   },
   mounted() {
-    window.sr = ScrollReveal();
-    sr.reveal('.animate');
+  //   window.sr = ScrollReveal();
+  //   sr.reveal('.animate');
     let tmp = new Date();
     this.today = [tmp.getMonth()+1, tmp.getDate()]
   }

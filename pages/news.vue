@@ -5,6 +5,8 @@
   >
     <div class="text-center hidden-md-and-up">
       <v-img
+        width="100%"
+        height="250px"
         :src=img_news
         decoding="async"
       >
@@ -16,12 +18,14 @@
       class="hidden-sm-and-down"
     >
       <v-img
+        width="100%"
+        height="700px"
         :src=img_news
         decoding="async"
       >
       </v-img>
     </v-col>
-    <mainNews :num=100 class="animate"/>
+    <mainNews :num=100 />
   </v-layout>
 </template>
 

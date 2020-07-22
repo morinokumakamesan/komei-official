@@ -5,6 +5,8 @@
   >
     <div class="text-center hidden-md-and-up">
       <v-img
+        width="100%"
+        height="250px"
         :src=img_profile
         decoding="async"
       >
@@ -16,13 +18,15 @@
       class="hidden-sm-and-down"
     >
       <v-img
+        width="100%"
+        height="700px"
         :src=img_profile
         decoding="async"
       >
       </v-img>
     </v-col>
-    <mainProfile class="animate"/>
-    <History class="animate"/>
+    <mainProfile />
+    <History />
   </v-layout>
 </template>
 
@@ -50,9 +54,9 @@ export default {
       ]
     }
   },
-  mounted() {
-    window.sr = ScrollReveal();
-    sr.reveal('.animate');
-  }
+  // mounted() {
+  //   window.sr = ScrollReveal();
+  //   sr.reveal('.animate');
+  // }
 }
 </script>
