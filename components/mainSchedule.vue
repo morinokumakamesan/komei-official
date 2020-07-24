@@ -150,11 +150,27 @@ export default {
       schedule: [
         {
           type: 'live',
-          date: '2020.07.14（火）',
+          date: '2020.08.06（木）',
           content: `Asakusa Gold Sound pre.
-『杉本孔明×尾上明範×足達翔スリーマンライブ~言葉の灯~』
+『タイトル未定』
 `,
-          img: require('../assets/images/20200714.jpg'),
+          img: '',
+        },
+        {
+          type: 'live',
+          date: '2020.08.15（土）',
+          content: `Asakusa Gold Sound pre.
+『浅草金音盆祭』
+`,
+          img: require('../assets/images/20200815.jpg'),
+        },
+        {
+          type: 'live',
+          date: '2020.09.17（火）',
+          content: `Asakusa Gold Sound pre.
+杉本孔明×大塚祥平ツーマンライブ『渇望の日々』
+`,
+          img: require('../assets/images/20200917.jpg'),
         },
       ],
       info_color: 'blue darken-4',

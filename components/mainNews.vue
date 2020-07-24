@@ -117,16 +117,40 @@ export default {
       news: [
         {
           type: 'live',
+          date: '2020.07.24（金）',
+          content: `【2020.09.17（火）】
+Asakusa Gold Sound pre.
+杉本孔明×大塚祥平ツーマンライブ『渇望の日々』
+`
+        },
+        {
+          type: 'live',
+          date: '2020.07.24（金）',
+          content: `【2020.08.15（土）】
+Asakusa Gold Sound pre.
+『浅草金音盆祭』
+`
+        },
+        {
+          type: 'live',
+          date: '2020.07.24（金）',
+          content: `【2020.08.06（木）】
+Asakusa Gold Sound pre.
+『タイトル未定』
+`
+        },
+        {
+          type: 'info',
+          date: '2020.07.24（金）',
+          content: '孔明オフィシャルサイトを公開しました。'
+        },
+        {
+          type: 'live',
           date: '2020.06.18（木）',
           content: `【2020.07.14（火）】
 Asakusa Gold Sound pre.
 『杉本孔明×尾上明範×足達翔スリーマンライブ~言葉の灯~』
 `
-        },
-        {
-          type: 'info',
-          date: '2020.04.11（土）',
-          content: '孔明オフィシャルサイトを公開しました。'
         },
       ],
       info_color: 'blue darken-4',

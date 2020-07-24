@@ -75,6 +75,38 @@ export default {
           id:9,
           src: require('../assets/images/9.jpg'),
         },
+        {
+          id:10,
+          src: require('../assets/images/10.jpg'),
+        },
+        {
+          id:11,
+          src: require('../assets/images/11.jpg'),
+        },
+        {
+          id:12,
+          src: require('../assets/images/12.jpg'),
+        },
+        {
+          id:13,
+          src: require('../assets/images/13.jpg'),
+        },
+        {
+          id:14,
+          src: require('../assets/images/14.jpg'),
+        },
+        {
+          id:15,
+          src: require('../assets/images/15.jpg'),
+        },
+        {
+          id:16,
+          src: require('../assets/images/16.jpg'),
+        },
+        {
+          id:17,
+          src: require('../assets/images/17.jpg'),
+        },
       ]
     }
   }
