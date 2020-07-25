@@ -105,7 +105,7 @@ module.exports = {
     transpile: [/^vuetify/],
 
     splitChunks: {
-      layouts: true,
+      layouts: false,
       pages: true,
       commons: true
     },
