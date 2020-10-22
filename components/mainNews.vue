@@ -117,6 +117,22 @@ export default {
       news: [
         {
           type: 'live',
+          date: '2020.10.22（木）',
+          content: `【2020.11.12（木）】
+Asakusa Gold Sound pre.
+『Asakusa ACO Soul』
+`
+        },
+        {
+          type: 'live',
+          date: '2020.10.22（木）',
+          content: `【2020.11.08（日）】
+Asakusa Gold Sound pre.
+『ASAKUSA ACOUSTIC REVOLUTION Fes vol.1』
+`
+        },
+        {
+          type: 'live',
           date: '2020.07.24（金）',
           content: `【2020.09.17（火）】
 Asakusa Gold Sound pre.

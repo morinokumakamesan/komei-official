@@ -150,28 +150,44 @@ export default {
       schedule: [
         {
           type: 'live',
-          date: '2020.08.06（木）',
+          date: '2020.11.08（日）',
           content: `Asakusa Gold Sound pre.
-『タイトル未定』
+『ASAKUSA ACOUSTIC REVOLUTION Fes vol.1』
 `,
-          img: '',
+          img: require('../assets/images/20201108.jpg'),
         },
         {
           type: 'live',
-          date: '2020.08.15（土）',
+          date: '2020.11.12（木）',
           content: `Asakusa Gold Sound pre.
-『浅草金音盆祭』
+『Asakusa ACO Soul』
 `,
-          img: require('../assets/images/20200815.jpg'),
+          img: require('../assets/images/20201112.jpg'),
         },
-        {
-          type: 'live',
-          date: '2020.09.17（火）',
-          content: `Asakusa Gold Sound pre.
-杉本孔明×大塚祥平ツーマンライブ『渇望の日々』
-`,
-          img: require('../assets/images/20200917.jpg'),
-        },
+//         {
+//           type: 'live',
+//           date: '2020.08.06（木）',
+//           content: `Asakusa Gold Sound pre.
+// 『タイトル未定』
+// `,
+//           img: '',
+//         },
+//         {
+//           type: 'live',
+//           date: '2020.08.15（土）',
+//           content: `Asakusa Gold Sound pre.
+// 『浅草金音盆祭』
+// `,
+//           img: require('../assets/images/20200815.jpg'),
+//         },
+//         {
+//           type: 'live',
+//           date: '2020.09.17（火）',
+//           content: `Asakusa Gold Sound pre.
+// 杉本孔明×大塚祥平ツーマンライブ『渇望の日々』
+// `,
+//           img: require('../assets/images/20200917.jpg'),
+//         },
       ],
       info_color: 'blue darken-4',
       live_color: 'orange darken-3',
